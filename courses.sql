@@ -75,6 +75,112 @@ ALTER TABLE "courses" ADD FOREIGN KEY ("level") REFERENCES "levels" ("id");
 
 -- Insert data in data base 
 
+insert into categories (
+	id,
+	name 
+) values (
+	1,
+	'software'
+), (
+	2,
+	'Desing UX'
+);
+
+-- 
+
+insert into course_videos (
+	id,
+	title,
+	url
+) values (
+ 'f09f8bdb-b732-43a3-980c-1ed9dd9dd5c0',
+ 'JavaScript',
+ 'https://courseWebDesing.com'
+), (
+	'096fe186-cf4e-44d6-a416-de3299e5d140',
+	'Desing UX',
+	'https://courseDesingUX.com'
+);
+
+-- 
+
+insert into roles (
+	id,
+	name
+	
+) values (
+	1,
+	'student'
+), (
+	2,
+	'teacher'
+), (
+	3, 
+	'admin'
+);
+
+-- 
+
+
+insert into memberships (
+	id,
+	name
+) values(
+	1,
+	'pack basic'
+), (
+	2,
+	'package medium'
+), (
+	3,
+	'package premium'
+);
+
+-- 
+
+
+insert into levels (
+	id,
+	name
+) values (
+ 	1,
+ 	'beginners'
+ ), (
+ 	2,
+ 	'middle'
+ ),  (
+	3,
+	'advanced'
+ );
+
+
+--  
+
+insert into courses (
+	id,
+	categorie,
+	title,
+	description,
+	level,
+	teacher
+) values (
+	'01841dd3-f4c4-4b1f-aab8-364c152b64d4',
+	1,
+	'programing',
+	'this course is about programing with javascript',
+	1,
+	'alex'
+), (
+	'11d5b279-d619-418d-b30d-859a579bd9ef',
+	2,
+	'Desing UX'
+	'Course about Desing UX'
+	3,
+	'Mk ramiro'
+);
+
+-- 
+
 insert into users (
 	id,
 	name,
@@ -101,48 +207,11 @@ insert into users (
 	2
 );
 
-insert into roles (
-	id,
-	name
-	
-) values (
-	1,
-	'student'
-), (
-	2,
-	'teacher'
-), (
-	3, 
-	'admin'
-);
 
-insert into memberships (
-	id,
-	name
-) values(
-	1,
-	'pack basic'
-), (
-	2,
-	'package medium'
-), (
-	3,
-	'package premium'
-);
 
-insert into levels (
-	id,
-	name
-) values (
- 	1,
- 	'beginners'
- ), (
- 	2,
- 	'middle'
- ),  (
-	3,
-	'advanced'
- );
+
+
+
 
 insert into courses_users (
 	id,
@@ -168,55 +237,8 @@ insert into courses_course_video (
 	'f09f8bdb-b732-43a3-980c-1ed9dd9dd5c0'
 );
 
-insert into courses (
-	id,
-	categorie,
-	title,
-	description,
-	level,
-	teacher
-) values (
-	'01841dd3-f4c4-4b1f-aab8-364c152b64d4',
-	1,
-	'programing',
-	'this course is about programing with javascript',
-	1,
-	'alex'
-), (
-	'11d5b279-d619-418d-b30d-859a579bd9ef',
-	2,
-	'Desing UX'
-	'Course about Desing UX'
-	3,
-	'Mk ramiro'
-);
-
-
-insert into course_videos (
-	id,
-	title,
-	url
-) values (
- 'f09f8bdb-b732-43a3-980c-1ed9dd9dd5c0',
- 'JavaScript',
- 'https://courseWebDesing.com'
-), (
-	'096fe186-cf4e-44d6-a416-de3299e5d140',
-	'Desing UX',
-	'https://courseDesingUX.com'
-);
-
-insert into categories (
-	id,
-	name 
-) values (
-	1,
-	'software'
-), (
-	2,
-	'Desing UX'
-);
 
 
 
- 
+
+
